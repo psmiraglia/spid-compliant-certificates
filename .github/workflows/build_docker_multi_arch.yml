@@ -3,8 +3,7 @@ name: Build multi-arch Docker image
 on:
   push:
     branches:
-      - main
-      - master
+      - '**'
     tags:
       - '*.*.*'
 
