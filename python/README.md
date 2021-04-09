@@ -7,7 +7,8 @@ to Avviso SPID n.29 v3.
 
 Nothing more than
 
-    $ pip install .
+    $ pip install -r requirements.txt
+    $ python setup.py install
 
 ## Command line usage
 
