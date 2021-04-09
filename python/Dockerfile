@@ -18,10 +18,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM --platform=$BUILDPLATFORM python:3-slim
-
-ARG TARGETPLATFORM
-ARG BUILDPLATFORM
+FROM python:3-slim
 
 LABEL maintainer="Paolo Smiraglia <paolo.smiraglia@gmail.com>"
 
@@ -30,6 +27,7 @@ WORKDIR /src/app
 
 RUN useradd --no-create-home spid \
     && mkdir /tmp/certs \
+    && chown -R spid /tmp/certs \
     && ln -s /tmp/certs /certs \
     && pip install --no-cache-dir -r requirements.txt \
     && python setup.py install
