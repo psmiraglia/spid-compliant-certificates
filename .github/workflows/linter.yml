@@ -27,7 +27,7 @@ jobs:
           fetch-depth: 0
 
       - name: Lint Code Base
-        uses: github/super-linter@v3
+        uses: github/super-linter@v3.17.0
         env:
           FILTER_REGEX_INCLUDE: '.*python/.*'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
