@@ -52,7 +52,7 @@ jobs:
           type=edge,branch=master
     -
       name: Setup QEMU
-      uses: docker/setup-qemu-action@v1
+      uses: docker/setup-qemu-action@v1.1.0
     -
       name: Setup Docker Buildx
       uses: docker/setup-buildx-action@v1
